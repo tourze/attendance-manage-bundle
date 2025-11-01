@@ -42,8 +42,7 @@ final class AttendanceGroupCrudControllerTest extends AbstractEasyAdminControlle
 
     public function testIndexPage(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
         $crawler = $client->request('GET', '/admin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -57,8 +56,7 @@ final class AttendanceGroupCrudControllerTest extends AbstractEasyAdminControlle
 
     public function testCreateAttendanceGroup(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
         $client->request('GET', '/admin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 

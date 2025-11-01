@@ -46,8 +46,7 @@ final class AttendanceLeaveApplicationCrudControllerTest extends AbstractEasyAdm
 
     public function testIndexPage(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
         $crawler = $client->request('GET', '/admin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -61,8 +60,7 @@ final class AttendanceLeaveApplicationCrudControllerTest extends AbstractEasyAdm
 
     public function testCreateLeaveApplication(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
         $client->request('GET', '/admin');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -449,8 +447,7 @@ final class AttendanceLeaveApplicationCrudControllerTest extends AbstractEasyAdm
 
     public function testApproveApplication(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         // Create test entity first
         $repository = self::getService(LeaveApplicationRepository::class);
@@ -478,8 +475,7 @@ final class AttendanceLeaveApplicationCrudControllerTest extends AbstractEasyAdm
 
     public function testRejectApplication(): void
     {
-        $client = self::createClientWithDatabase();
-        $this->loginAsAdmin($client);
+        $client = self::createAuthenticatedClient();
 
         // Create test entity first
         $repository = self::getService(LeaveApplicationRepository::class);
