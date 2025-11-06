@@ -43,7 +43,7 @@ class AdminMenuTest extends AbstractEasyAdminMenuTestCase
         $this->linkGenerator
             ->method('getCurdListPage')
             ->willReturnCallback(function (string $entityClass) {
-                return 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode($entityClass);
+                return '/admin?crudAction=index&crudControllerFqcn=' . urlencode($entityClass);
             })
         ;
 
@@ -58,27 +58,27 @@ class AdminMenuTest extends AbstractEasyAdminMenuTestCase
         $expectedMenus = [
             '考勤记录' => [
                 'icon' => 'fa fa-calendar-check',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(AttendanceRecord::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(AttendanceRecord::class),
             ],
             '考勤组管理' => [
                 'icon' => 'fa fa-users',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(AttendanceGroup::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(AttendanceGroup::class),
             ],
             '工作班次' => [
                 'icon' => 'fa fa-clock-o',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(WorkShift::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(WorkShift::class),
             ],
             '请假管理' => [
                 'icon' => 'fa fa-calendar-minus-o',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(LeaveApplication::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(LeaveApplication::class),
             ],
             '加班管理' => [
                 'icon' => 'fa fa-clock-plus-o',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(OvertimeApplication::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(OvertimeApplication::class),
             ],
             '节假日配置' => [
                 'icon' => 'fa fa-calendar',
-                'uri' => 'http://localhost/admin?crudAction=index&crudControllerFqcn=' . urlencode(HolidayConfig::class),
+                'uri' => '/admin?crudAction=index&crudControllerFqcn=' . urlencode(HolidayConfig::class),
             ],
         ];
 
