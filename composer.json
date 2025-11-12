@@ -1,6 +1,7 @@
 {
   "name": "tourze/attendance-manage-bundle",
   "type": "symfony-bundle",
+  "description": "考勤管理",
   "license": "MIT",
   "require": {
     "doctrine/dbal": "^4.0",
@@ -52,6 +53,5 @@
     "psr-4": {
       "Tourze\\AttendanceManageBundle\\Tests\\": "tests"
     }
-  },
-  "version": "0.0.1"
+  }
 }
