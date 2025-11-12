@@ -24,7 +24,7 @@ class HolidayConfig implements \Stringable
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: Types::INTEGER, options: ['comment' => '主键ID'])]
-    private int $id; // @phpstan-ignore-line
+    private int $id;
 
     #[ORM\Column(type: Types::STRING, length: 100, options: ['comment' => '节假日名称'])]
     #[Assert\NotBlank(message: '节假日名称不能为空')]

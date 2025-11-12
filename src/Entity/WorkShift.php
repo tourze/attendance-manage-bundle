@@ -20,7 +20,7 @@ class WorkShift implements \Stringable
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: Types::INTEGER, options: ['comment' => '主键ID'])]
-    private int $id; // @phpstan-ignore-line
+    private int $id;
 
     #[IndexColumn]
     #[ORM\Column(type: Types::INTEGER, name: 'group_id', options: ['comment' => '考勤组ID'])]

@@ -21,7 +21,7 @@ class AttendanceGroup implements \Stringable
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: Types::INTEGER, options: ['comment' => '主键ID'])]
-    private int $id; // @phpstan-ignore-line
+    private int $id;
 
     #[ORM\Version]
     #[ORM\Column(type: Types::INTEGER, options: ['comment' => '版本号，用于乐观锁'])]

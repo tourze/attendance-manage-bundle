@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tourze\AttendanceManageBundle\Exception;
 
-/** @phpstan-ignore-next-line forbiddenExtendOfNonAbstractClass */
 class WorkShiftException extends AttendanceException
 {
     public static function invalidTimeFormat(string $timeString): self

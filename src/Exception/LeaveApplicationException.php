@@ -6,7 +6,6 @@ namespace Tourze\AttendanceManageBundle\Exception;
 
 use Tourze\AttendanceManageBundle\Enum\LeaveType;
 
-/** @phpstan-ignore-next-line forbiddenExtendOfNonAbstractClass */
 class LeaveApplicationException extends AttendanceException
 {
     public static function invalidDateRange(): self
