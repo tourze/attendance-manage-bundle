@@ -368,7 +368,7 @@ readonly class RuleService
     public function createAttendanceRule(array $ruleData): array
     {
         if (!$this->validateAttendanceRule($ruleData)) {
-            throw new AttendanceException('规则数据验证失败');
+            throw AttendanceException::invalidCheckIn('规则数据验证失败');
         }
 
         return [
